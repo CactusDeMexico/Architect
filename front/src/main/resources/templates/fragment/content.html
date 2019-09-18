@@ -7,103 +7,12 @@
 <body>
 <div th:fragment="home">
 
-    <main role="main">
-        <div class="jumbotron">
-            <h1> accueil</h1>
-        </div>
-        <!-- _________________________DEBUT TOPO________________________ -->
-        <div>
-            <div class="container">
 
-
-                <!--_________________________ DEBUT SPOT_______________________ -->
-
-                <div class="row">
-
-                    <div class="col-md-4" th:each="books, stat : ${book}"
-                    >
-                        <div class="card" style="width: 18rem;">
-                            <img src="#" th:src="@{/img/__${books.getUrlImage()}__}" class="card-img-top" alt="test 1"
-                                 height="300px">
-                            <div class="card-body">
-                                <!-- Nom Sport -->
-                                <h5 class="card-title" th:text="${books.getTitle()}">
-                                </h5>
-                                <h6 class="card-title">nb d'exemplaire restant(s)
-                                    <td th:text="${books.getNbCopyAvailable()}"></td>
-                                </h6>
-                                <p class="card-text hide" th:text="${books.getSummary()}">
-
-                                </p>
-                                <td th:if="${!userName.equals('0')} and ${books.getNbCopyAvailable()>0}">
-                                    <form method="POST" th:action="@{/borrow/(idbook=${books.getIdBook()})}">
-                                        <button type="submit" name="submit" value="value"
-                                                th:href="@{/borrow/(idbook=${books.getIdBook()})}"
-                                                class="btn btn-success">Emprunter
-                                        </button>
-
-                                    </form>
-                                </td>
-                            </div>
-                        </div>
-                        <!-- _______________________FIN SPOT_________________________ -->
-                    </div>
-                </div>
-                </br>
-            </div>
-            <!--______________ FIN TOPO _____________________________-->
-        </div>
-        <div th:if="${book.size()==0}" class="alert alert-primary" role="alert"> Aucun livre disponible</div>
-    </main>
 
 </div>
 <div th:fragment="loggedhome">
 
-    <main role="main">
-        <div class="jumbotron">
-            <h1> Vos emprunts</h1>
-        </div>
 
-        <div class="container">
-            <div class="row">
-                <div th:each="borrows, stat : ${borrow}">
-                    <div class="col-md-4" th:each="books, stat : ${book}"
-                         th:if="${borrows.getIdBook()}==${books.getIdBook()}">
-                        <div class="card" style="width: 18rem;">
-                            <img src="#" th:src="@{/img/__${books.getUrlImage()}__}" class="card-img-top" alt="test 1"
-                                 height="300px">
-                            <div class="card-body">
-                                <!-- Nom Sport -->
-                                <h5 class="card-title" th:text="${books.getTitle()}">
-                                </h5>
-                                <h6 class="card-title">à rendre le :
-                                    <td th:text="${#dates.format(borrows.getReturnDate(),'dd-MM-YYYY')}"></td>
-                                </h6>
-                                <div th:if="${now.compareTo(borrows.getReturnDate())}>0"
-                                     class="row center alert alert-secondary" role="alert"> Vous êtes en retard
-                                </div>
-                                <!--
-                                <div th:if="(${borrows.getReturnDate().compareTo(${now})})>0"
-                                     class="row center alert alert-secondary" role="alert"> Vous êtes en retard
-                                </div>-->
-                                <p class="card-text hide" th:text="${books.getSummary()}">
-                                </p>
-                                <td th:if="${!borrows.isExtended()}">
-                                    <form method="POST" th:action="@{/borrowed/(idborrow=${borrows.getIdBorrow()})}">
-                                        <button type="submit" name="submit" value="value"
-                                                class="btn btn-success">Ralonger
-                                        </button>
-                                    </form>
-                                </td>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div th:if="${borrow.size()}==0" class="alert alert-primary" role="alert"> Aucun emprunt</div>
-            </div>
-            </br>
-        </div>
-    </main>
 </div>
 
 <div th:fragment="login">
