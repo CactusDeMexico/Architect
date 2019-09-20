@@ -27,6 +27,8 @@ public class Project {
 
     @Column(name = "surface")
     private int surface;
+    @Column(name = "urlImg")
+    private String urlImg;
 
     @Column(name = "hidden")
     private boolean hidden;

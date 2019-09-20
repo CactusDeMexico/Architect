@@ -47,10 +47,7 @@ public class User {
 
     private String password;
 
-
     private boolean hidden;
-
-
 
 
     private Set<Role> roles;

@@ -17,6 +17,11 @@ public class Material {
 
     @Column(name = "name")
     private String name;
+    @Column(name = "thickness")
+    private int thickness;
+
+    @Column(name = "opaque")
+    private boolean opaque;
 
 
 }

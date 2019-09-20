@@ -39,13 +39,25 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/createUser").permitAll()
+                .antMatchers("/createUser").hasAuthority("ADMIN")
                 .antMatchers("/queryUsers").permitAll()
                 .antMatchers("/queryUserById").permitAll()
-               .antMatchers("/updateUserById").permitAll()
+                .antMatchers("/updateUserById").permitAll()
                 .antMatchers("/deleteUserById").permitAll()
-                .antMatchers("/clockInUserById").permitAll()
-                .antMatchers("/clockOutUserById").permitAll()
+                .antMatchers("/queryMeeting").permitAll()
+                .antMatchers("/queryBlockedEmail").permitAll()
+                .antMatchers("/").permitAll()
+                .antMatchers("/queryAllMeeting").permitAll()
+                .antMatchers("/home").permitAll()
+                .antMatchers("/index").permitAll()
+                .antMatchers("/queryUserByName").permitAll()
+                .antMatchers("/meeting").permitAll()
+                 .antMatchers("/addMaterial").hasAuthority("ADMIN")
+
+                .antMatchers("/verifyMeeting").permitAll()
+
+                .antMatchers("/login").permitAll()
+                .antMatchers("/addProject").hasAuthority("ADMIN")
 
                 .antMatchers("/loggedhome").hasAuthority("ADMIN").anyRequest()
 

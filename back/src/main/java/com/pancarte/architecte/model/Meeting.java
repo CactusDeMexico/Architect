@@ -32,4 +32,7 @@ public class Meeting {
     private boolean closed;
     @Column(name = "date_meeting")
     private Timestamp dateMeeting;
+
+    @Column(name = "email")
+    private String email;
 }

@@ -8,6 +8,7 @@ import java.sql.Timestamp;
 
 @Getter
 @Setter
+
 public class Meeting {
 
     private int id;
@@ -26,4 +27,7 @@ public class Meeting {
     private boolean closed;
 
     private Timestamp dateMeeting;
+    private String email;
+
+
 }

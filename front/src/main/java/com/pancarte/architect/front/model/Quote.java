@@ -21,6 +21,6 @@ public class Quote {
 
 
     private int surface;
-
-
+    private String email;
+    private String urlImg;
 }

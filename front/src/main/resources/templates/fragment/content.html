@@ -7,14 +7,309 @@
 <body>
 <div th:fragment="home">
 
+    <main role="main">
+        <div th:if="${search.equals('0')}" class="jumbotron">
+            <h1> accueil</h1>
+        </div>
+        <div th:if="${!search.equals('0')}" class="jumbotron">
+            <h1 class="display-3"> Vous avez recherché :
+                <td th:text="${search}"></td>
+            </h1>
+        </div>
 
+        <hr>
+        <h2 class="text-center">Les projets realiser</h2>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+
+                            <a href="" >
+                                <img src="https://www.telegraph.co.uk/content/dam/Travel/ski/K2-mountain-Andrzej-Bargiel-first-ski-descent-by-Piotr-Pawlus-Red-Bull-Content-Pool.jpg?imwidth=1400"
+                                     class="card-img-top" alt="..." height="200px"> </a>
+                            <div class="caption">
+                                <div class="card-body">
+                                    <ul class="product-flags">
+                                        <li class="product-flag new">xx jours restants</li>
+                                    </ul>
+                                    <h3>nom du project</h3>
+                                    <h4>type project</h4>
+                                    <h4>surface : 55m²</h4>
+
+                                    <p>description</p>
+
+
+                                    <input type="hidden" name="hidden_name" value="" />
+
+                                    <input type="hidden" name="hidden_price" value="" />
+
+                                    <!--
+                                    <p><a href="index.php?page=12" class="btn btn-primary" role="button" name="ajouter">
+                                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">Ajouter</a></p></span>
+
+                                     -->
+                                </div>
+                                <button  type="submit" name="add_to_cart"  class="btn btn-primary glyphicon glyphicon-shopping-cart " value="Add to Cart">
+                                    <b class="text-center"> Ajouter</b>
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+
+                    <table class="table center-block">
+                        <h3 class="text-center"> Materiaux</h3>
+                        <thead>
+                        <tr>
+                            <th scope="col-lg-8">nom</th>
+                            <th scope="col-sm-8">epaisser</th>
+                            <th scope="col-sm-8">etanche</th>
+                            <th scope="col-sm-8">opaque</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+
+    </main>
 
 </div>
 <div th:fragment="loggedhome">
+    <div class="jumbotron">
+        <div class="container">
+            <h1> Bienvenue <td th:text="${userName}"></td> </h1>
+        </div>
+    </div>
+    <main>
+        <div class="container">
+            <div class="row" th:each="meeting, stat : ${meetingList}" th:if="!${meeting.isClosed()}">
+                <div class="col-lg-12 center-block">
 
+                    <table class="table center-block">
+                        <<h3 class="text-center" > Vos rendez-vous</h3>
+                        <thead>
+                        <tr>
+                            <th scope="col-sm">date</th>
+                            <th scope="col-sm">email</th>
+                            <th scope="col-md">purpose</th>
+                            <th scope="col-em">invitation</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row" th:text="${meeting.getDateMeeting()}"></th>
+                            <td th:text="${meeting.getEmail()}"></td>
+                            <td th:text="${meeting.getPurpose()}"></td>
+                            <td th:if="${!meeting.isClosed()}">
+                                <a title="Valider"
+                                   th:href="@{/verifyMeeting/(id_meeting=${meeting.getId()},meeting=true)}"
+                                >
+                                    <i class="fas fa-check"></i>
+                                </a>
+
+                                <a th:href="@{/verifyMeeting/(id_meeting=${meeting.getId()},meeting=false)}"
+                                   title="Annuler">
+                                    <i class="fas fa-times"></i>
+                                </a>
+
+                            </td>
+                            <td th:if="${meeting.isClosed()}">traité</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="alert alert-success" th:if="${NoMeeting}" role="alert">
+                Toutes les demandes de rendez-vous sont traitées
+            </div>
+        </div>
+    </main>
 
 </div>
 
+<div th:fragment="verifyMeeting">
+    <main role="main">
+        <!-- _________________________DEBUT TOPO________________________ -->
+        <div>
+            <div class="container">
+                <!--_________________________ DEBUT SPOT_______________________ -->
+                <div class="jumbotron">
+                    <div class="container" th:if="${meetingValidate}">
+                        <h1> Rendez-vous validé</h1>
+                    </div>
+                    <div class="container" th:if="!${meetingValidate}">
+                        <h1> Rendez-vous annulé</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+</div>
+<div th:fragment="meeting">
+
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1> Prise de rendez vous</h1>
+        </div>
+    </div>
+    <main>
+        <div class="container">
+
+
+            <form th:object="${meeting}" th:action="@{/meeting}" role="form" method="POST">
+
+                <div class="row">
+
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="email">Mail</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                                <input type="text" th:field="*{email}" class="form-control" id="email"
+                                       placeholder="Email" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="purpose">Sujet</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                                <input type="text" th:field="*{purpose}" class="form-control" id="purpose"
+                                       placeholder="Sujet" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="meetingDate">Date du rendez-vous</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                                <input type="datetime-local" th:field="*{dateSended}" class="form-control"
+                                       id="meetingDate"
+                                       placeholder="date du rendez vous" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Prendre Rendez vous</button>
+
+            </form>
+        </div>
+    </main>
+</div>
+
+
+<div th:fragment="addProject">
+
+<h1> ajout project</h1>
+</div>
+<div th:fragment="addMaterial">
+
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1> Ajout de materiaux</h1>
+        </div>
+    </div>
+    <main>
+        <div class="container">
+
+
+            <form th:object="${material}" th:action="@{/addMaterial}" role="form" method="POST">
+
+                <div class="row">
+
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                                <input type="text" th:field="*{name}" class="form-control" id="name"
+                                       placeholder="Name" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="thickness">Epaisseur(mm)</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                                <input type="text" th:field="*{thickness}" class="form-control" id="thickness"
+                                       placeholder="Epaisseur(mm)" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="meetingDate">Opaque</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+
+                                <input type="text" th:field="*{opaque}"  name="lieuTopo" list="lieuTopo"
+                                       class=" custom-select">
+                                <datalist id="lieuTopo">
+                                    <option th:value="true">oui</option>
+                                   <option th:value="false">non</option>
+
+                                </datalist>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ajouter le materiel</button>
+
+            </form>
+        </div>
+    </main>
+</div>
 <div th:fragment="login">
     <main role="main">
         <div class="jumbotron">

@@ -42,10 +42,20 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/createUser").permitAll()
                 .antMatchers("/queryUsers").permitAll()
                 .antMatchers("/queryUserById").permitAll()
-               .antMatchers("/updateUserById").permitAll()
+                .antMatchers("/updateUserById").permitAll()
                 .antMatchers("/deleteUserById").permitAll()
-                .antMatchers("/clockInUserById").permitAll()
-                .antMatchers("/clockOutUserById").permitAll()
+                .antMatchers("/verifyMeeting").permitAll()
+                .antMatchers("/queryBlockedEmail").permitAll()
+
+                .antMatchers("/queryMeeting").permitAll()
+
+                .antMatchers("/sendMeeting").permitAll()
+
+                .antMatchers("/queryUserByName").permitAll()
+
+                .antMatchers("/queryAllMeeting").permitAll()
+
+                 .antMatchers("/addMaterial").permitAll()
 
                 .antMatchers("/loggedhome").hasAuthority("ADMIN").anyRequest()
 

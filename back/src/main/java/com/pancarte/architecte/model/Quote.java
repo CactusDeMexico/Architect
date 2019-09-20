@@ -27,5 +27,10 @@ public class Quote {
     @Column(name = "surface")
     private int surface;
 
+    @Column(name = "email")
+    private String email;
+    @Column(name = "urlImg")
+    private String urlImg;
+
 
 }

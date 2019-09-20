@@ -13,6 +13,7 @@ public class Project {
     private String projectName;
 
 
+
     private String description;
 
 
@@ -20,6 +21,7 @@ public class Project {
 
 
     private int surface;
+    private String urlImg;
 
 
     private boolean hidden;

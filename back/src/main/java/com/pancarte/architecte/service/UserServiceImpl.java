@@ -49,9 +49,9 @@ public class UserServiceImpl implements UserService {
 
          //Date now = Date.valueOf(LocalDate.now());
 
-        user.setPassword(user.getPassword());
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setHidden(true);
-        Role userRole = roleRepository.findByRole("Employee");
+        Role userRole = roleRepository.findByRole("ADMIN");
         user.setRoles(new HashSet<Role>(Arrays.asList(userRole)));
         userRepository.save(user);
     }
