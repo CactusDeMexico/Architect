@@ -93,7 +93,6 @@ public class ArchitectController {
         userRepository.save(user);
     }
 
-    //todo:CRUD
 
     @RequestMapping(value = {"/addMaterial"}, method = RequestMethod.GET)
     public void addMaterial(@RequestParam("name") String name,
@@ -172,7 +171,7 @@ public class ArchitectController {
         return result;
     }
 
-    //todo: send email to architeck ton notify a meeting and ask if he validate
+
     @RequestMapping(value = {"/sendMeeting"}, method = RequestMethod.GET)
     public void sendMeeting(@RequestParam("email") String email, @RequestParam("dateSended") Timestamp dateSended, @RequestParam("purpose") String purpose) {
         List<BlockedMail> blockedMails = blockedMailRepository.findAll();
@@ -223,7 +222,7 @@ public class ArchitectController {
 
         User userArchitect = userRepository.queryUser("marj12@live.fr");
 
-        //todo:send email if ok or not
+
         if (meeting) {
             sendEmail(checkMeeting.getEmail(),
                     SUBJECT,
@@ -239,7 +238,7 @@ public class ArchitectController {
         meetingRepository.save(checkMeeting);
     }
 
-    //todo:check if 1 week passed and clean unvalidate meeting
+
     @Scheduled(cron = "	0 0 0 1/1 * ? ")// tout les jours à 0h00
     @RequestMapping(value = {"/cleanMeeting"}, method = RequestMethod.GET)
     public void cleanMeeting() {
