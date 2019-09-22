@@ -19,10 +19,15 @@ import java.sql.Date;
 import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
-
+/**
+ * Controleur
+ * @author Marjorie Pancarte
+ * @version 1.0
+ */
 @RestController
 public class ArchitectController {
     private final UserRepository userRepository;
@@ -35,8 +40,20 @@ public class ArchitectController {
     private final JavaMailSender javaMailSender;
     private static final String SUBJECT = "Rendez vous avec M.architect ";
 
+    /**
+     * Le constructeur
+     * @param roleRepository le répertoire du role de
+     * @param userRepository  le répertoire de l'utilisateur
+     * @param meetingRepository le répertoire des rendez-vous
+     * @param materialRepository  le répertoire des materiaux
+     * @param blockedMailRepository le répertoire des email bloqué
+     * @param projectRepository le répertoire des project
+     * @param userService le service des utilisateur
+     * @param javaMailSender config pour l'envoie d'email
+     *
+     */
     @Autowired
-    public ArchitectController(@Qualifier("roleRepository") RoleRepository roleRepository, @Qualifier("userRepository") UserRepository userRepository, MeetingRepository meetingRepository, @Qualifier("materialRepository") MaterialRepository materialRepository, @Qualifier("blockedMailRepository") BlockedMailRepository blockedMailRepository,@Qualifier("projectRepository") ProjectRepository projectRepository, UserService userService, JavaMailSender javaMailSender) {
+    public ArchitectController(@Qualifier("roleRepository") RoleRepository roleRepository, @Qualifier("userRepository") UserRepository userRepository, @Qualifier("meetingRepository") MeetingRepository meetingRepository, @Qualifier("materialRepository") MaterialRepository materialRepository, @Qualifier("blockedMailRepository") BlockedMailRepository blockedMailRepository, @Qualifier("projectRepository") ProjectRepository projectRepository, UserService userService, JavaMailSender javaMailSender) {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
         this.meetingRepository = meetingRepository;
@@ -47,6 +64,12 @@ public class ArchitectController {
         this.javaMailSender = javaMailSender;
     }
 
+    /**
+     * Envoie un email
+     * @param email    L'email du destinataire
+     * @param subject  Le sujet du mail
+     * @param text     Le contenu du mail
+     */
     void sendEmail(String email, String subject, String text) {
         SimpleMailMessage msg = new SimpleMailMessage();
         msg.setTo(email);
@@ -54,7 +77,19 @@ public class ArchitectController {
         msg.setText(text);
         javaMailSender.send(msg);
     }
+    //todo:log4j
+    //todo:javadoc
+    //todo:tests unitaires
+    //todo:Définir la licence de diffusion du code
+    //todo:Penser "utilisateur" : je souhaite modifier le contenu de l'email envoyé, il ne faut pas à avoir à modifier le code source, recompiler et redéployer l'application à chaque fois !!!
 
+    /**
+     * Cree un utilisateur
+     * @param lastName le nom de famillle de l'utilisateur
+     * @param firstName le prenom  de l'utilisateur
+     * @param email     l'email de l'utilisateur
+     * @param password  le mot de passe de l'utilisateur
+     */
     @RequestMapping(value = {"/createUser"}, method = RequestMethod.GET)
     public void createUser(@RequestParam("last_name") String lastName,
                            @RequestParam("first_name") String firstName,
@@ -69,23 +104,41 @@ public class ArchitectController {
         userService.saveUser(user);
     }
 
+    /**
+     * Recupère les utilisateur
+     * @return renvoie les utilisateur
+     */
     @RequestMapping(value = {"/queryUsers"}, method = RequestMethod.GET)
     public List<User> queryAllUser() {
 
         return userRepository.findAll();
     }
 
+    /**
+     * Recupere un utilisateur par son email
+     * @param email de l'utilisateur
+     * @return  un utilisateur
+     */
     @RequestMapping(value = {"/queryUserByName"}, method = RequestMethod.GET)
     public User queryUserByName(@RequestParam("email") String email) {
         return userRepository.queryUser(email);
     }
 
+    /**
+     * Recupere un utilisateur par id
+     * @param idUser  id de l'user
+     * @return
+     */
     @RequestMapping(value = {"/queryUserById"}, method = RequestMethod.GET)
     public User queryUserById(@RequestParam("id_user") int idUser) {
         User user = userRepository.findById(idUser);
         return user;
     }
 
+    /**
+     * Supprime un utilisateur
+     * @param idUser
+     */
     @RequestMapping(value = {"/deleteUserById"}, method = RequestMethod.GET)
     public void deleteUserById(@RequestParam("id_user") int idUser) {
         User user = userRepository.findById(idUser);
@@ -93,7 +146,12 @@ public class ArchitectController {
         userRepository.save(user);
     }
 
-
+    /**
+     * Ajoute un materiaux
+     * @param name Nom du materiaux
+     * @param thickness Epaisseur du matériaux
+     * @param opaque Si le materiaux est opaque
+     */
     @RequestMapping(value = {"/addMaterial"}, method = RequestMethod.GET)
     public void addMaterial(@RequestParam("name") String name,
                             @RequestParam("thickness") int thickness,
@@ -104,9 +162,43 @@ public class ArchitectController {
         material.setName(name);
         materialRepository.save(material);
     }
+    @RequestMapping(value = {"/queryAllMaterial"}, method = RequestMethod.GET)
 
+    /**
+     *  Recupere tout les materiaux
+     *   @return tout les materiaux
+     */
+    public List<Material> queryAllMaterial(){
+
+        return materialRepository.findAll();
+    }
+
+    /**
+     *  Recupere tout les projets
+     * @return tout les projets
+     */
+    @RequestMapping(value = {"/queryProject"}, method = RequestMethod.GET)
+    public List<Project> queryProject(){
+
+        return projectRepository.findAll();
+    }
+
+    /**
+     * Ajoute un projet
+     * @param description du projet
+     * @param name du projet
+     * @param type du projet
+     * @param material du projet
+     * @param surface du projet
+     * @param img du projet
+     */
     @RequestMapping(value = {"/addProject"}, method = RequestMethod.GET)
-    public void addProject(@RequestParam("description") String description, @RequestParam("name") String name, @RequestParam("type") String type, @RequestParam("material") String material, @RequestParam("surface") int surface) {
+    public void addProject(@RequestParam("description") String description,
+                           @RequestParam("name") String name,
+                           @RequestParam("type") String type,
+                           @RequestParam("material") String material,
+                           @RequestParam("surface") int surface,
+                           @RequestParam("img") String img) {
 
         Project project = new Project();
         project.setHidden(false);
@@ -115,11 +207,26 @@ public class ArchitectController {
 
         project.setSurface(surface);
         project.setType(type);
-        Material materials = materialRepository.findByName(material);
-        project.setMaterials(new HashSet<Material>(Arrays.asList(materials)));
+        project.setUrlImg(img);
+        String idMaterial[]=material.split(",");
+        List<Material> materialsList = new ArrayList<>();
+        for (int i=0; i<idMaterial.length;i++) {
+                materialsList.add( materialRepository.queryMaterialById(Integer.parseInt(idMaterial[i])));
+        }
+
+        project.setMaterials(new HashSet<Material>(materialsList));
         projectRepository.save(project);
     }
 
+    /**
+     * Met a jour le projet
+     * @param idProject du projet
+     * @param description du projet
+     * @param name du projet
+     * @param type du projet
+     * @param material du projet
+     * @param surface v
+     */
     @RequestMapping(value = {"/updateProject"}, method = RequestMethod.GET)
     public void updateProject(@RequestParam("id_project") int idProject, @RequestParam("description") String description, @RequestParam("name") String name, @RequestParam("type") String type, @RequestParam("material") String material, @RequestParam("surface") int surface) {
 
@@ -133,6 +240,10 @@ public class ArchitectController {
         projectRepository.save(projectUpdate);
     }
 
+    /**
+     * Supprime un projet
+     * @param idProject du projet
+     */
     @RequestMapping(value = {"/deleteProject"}, method = RequestMethod.GET)
     public void deleteProject(@RequestParam("id_project") int idProject) {
         Project project = projectRepository.queryProjectById(idProject);
@@ -141,25 +252,52 @@ public class ArchitectController {
         projectRepository.save(project);
     }
 
+    /**
+     * Bloque un email
+     * @param email de la personne qui sera bloqué
+     * @param cause raison du blocage
+     */
     @RequestMapping(value = {"/blockEmail"}, method = RequestMethod.GET)
     public void blockEmail(@RequestParam("email") String email, @RequestParam("cause") String cause) {
         BlockedMail blockedMail = new BlockedMail();
         blockedMail.setCause(cause);
         blockedMail.setEmail(email);
         blockedMailRepository.save(blockedMail);
+
     }
 
+    /**
+     * Recupere tout les emails bloqués
+     * @return tout les emails bloqués
+     */
     @RequestMapping(value = {"/queryBlockedEmail"}, method = RequestMethod.GET)
     public List<BlockedMail> queryblockedEmail(){
 
         return blockedMailRepository.findAll();
     }
-    @RequestMapping(value = {"/quoteMaking"}, method = RequestMethod.GET)
-    public String quoteMaking(@RequestParam("id_user") int idUser) {
+   /* @RequestMapping(value = {"/queryProjectMaterial"}, method = RequestMethod.GET)
+    public List<Project_Material> queryProjectMaterial(){
 
-        return "";
+        return materialRepository.queryProjectMaterial();
+    }*/
+   //todo: quote
+
+    /**
+     * Creer un Devis
+     * @param email
+     * @param idProjet
+     */
+    @RequestMapping(value = {"/quoteMaking"}, method = RequestMethod.GET)
+    public void quoteMaking(@RequestParam("email") String email,@RequestParam("id_projet") int idProjet) {
+
+
     }
 
+    /**
+     * Verifie si l'email est valide
+     * @param email a valider
+     * @return retourne si l'email est valide
+     */
     public static boolean isValidEmailAddress(String email) {
         boolean result = true;
         try {
@@ -171,7 +309,12 @@ public class ArchitectController {
         return result;
     }
 
-
+    /**
+     * Envoie une demande de rendez vous par  mail a l'architecte
+     * @param email du destinataire
+     * @param dateSended la date de rendez vous
+     * @param purpose le but du rendez vous
+     */
     @RequestMapping(value = {"/sendMeeting"}, method = RequestMethod.GET)
     public void sendMeeting(@RequestParam("email") String email, @RequestParam("dateSended") Timestamp dateSended, @RequestParam("purpose") String purpose) {
         List<BlockedMail> blockedMails = blockedMailRepository.findAll();
@@ -198,6 +341,7 @@ public class ArchitectController {
                             "\n Rendez vous avec :" + email + " le :" + dateSended
                             + "\n pour valider le rendez vous cliquer sur : http://localhost:9090/verifyMeeting?id_meeting=" + lastmeeting.getId() + "&meeting=true"
                             + "\n pour annuler le rendez vous cliquer sur : http://localhost:9090/verifyMeeting?id_meeting=" + lastmeeting.getId() + "&meeting=false"
+                            + "\n Pourbloquer cette email rendez vous cliquer sur : http://localhost:9090/blockEmail?email=" + email + "&cause=blocked"
             );
         } else {
             // possible mise en place d'envoie email pour les compte bloqué.
@@ -205,17 +349,28 @@ public class ArchitectController {
         }
     }
 
-
+    /**
+     * Recupere tout les rendez-vous
+     * @param idMeeting du rendez-vous
+     * @return
+     */
     @RequestMapping(value = {"/queryMeeting"}, method = RequestMethod.GET)
     public Meeting queryMeeting(@RequestParam("id_meeting") int idMeeting){
 
         return meetingRepository.queryMeetingById(idMeeting);
     }   @RequestMapping(value = {"/queryAllMeeting"}, method = RequestMethod.GET)
+    /**
+     * Recupere tout les rendez-vous
+     */
     public List<Meeting> queryAllMeeting(){
-
         return meetingRepository.findAll();
     }
 
+    /**
+     * Verifie la reponse de l'architecte pour le  rendez-vous
+     * @param meeting
+     * @param idMeeting
+     */
     @RequestMapping(value = {"/verifyMeeting"}, method = RequestMethod.GET)
     public void verifyMeeting(@RequestParam("meeting") boolean meeting, @RequestParam("id_meeting") int idMeeting) {
         Meeting checkMeeting = meetingRepository.queryMeetingById(idMeeting);
@@ -238,7 +393,10 @@ public class ArchitectController {
         meetingRepository.save(checkMeeting);
     }
 
-
+    /**
+     * Repond automatiquement en cas de non reponse (au bout de 1semaine) de l'architecte au rendz-vous
+     * Se lance tout les jours
+     */
     @Scheduled(cron = "	0 0 0 1/1 * ? ")// tout les jours à 0h00
     @RequestMapping(value = {"/cleanMeeting"}, method = RequestMethod.GET)
     public void cleanMeeting() {

@@ -53,6 +53,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/queryUserByName").permitAll()
                 .antMatchers("/meeting").permitAll()
                  .antMatchers("/addMaterial").hasAuthority("ADMIN")
+                .antMatchers("/queryProject").permitAll()
+                 .antMatchers("/queryAllMaterial").permitAll()
+                .antMatchers("/queryProjectMaterial").permitAll()
 
                 .antMatchers("/verifyMeeting").permitAll()
 

@@ -5,7 +5,11 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Set;
-
+/**
+ * classe representant un projet
+ * @author Marjorie Pancarte
+ * @version 1.0
+ */
 @Entity
 @Table(name ="project", schema = "public")
 @Getter

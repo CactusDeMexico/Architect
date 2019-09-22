@@ -4,7 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-
+/**
+ * classe representant  un materiaux
+ * @author Marjorie Pancarte
+ * @version 1.0
+ */
 @Entity
 @Table(name ="material", schema = "public")
 @Getter

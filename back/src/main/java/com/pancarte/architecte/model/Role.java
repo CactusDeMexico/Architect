@@ -4,7 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-
+/**
+ * classe representant un role
+ * @author Marjorie Pancarte
+ * @version 1.0
+ */
 @Entity
 @Table(name ="role")
 @Getter

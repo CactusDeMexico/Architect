@@ -4,6 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Set;
+/**
+ * classe representant un projet
+ * @author Marjorie Pancarte
+ * @version 1.0
+ */
 @Getter
 @Setter
 public class Project {
