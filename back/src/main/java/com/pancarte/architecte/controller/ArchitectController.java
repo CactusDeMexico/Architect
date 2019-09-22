@@ -78,7 +78,7 @@ public class ArchitectController {
         javaMailSender.send(msg);
     }
     //todo:log4j
-    //todo:javadoc
+
     //todo:tests unitaires
     //todo:Définir la licence de diffusion du code
     //todo:Penser "utilisateur" : je souhaite modifier le contenu de l'email envoyé, il ne faut pas à avoir à modifier le code source, recompiler et redéployer l'application à chaque fois !!!
