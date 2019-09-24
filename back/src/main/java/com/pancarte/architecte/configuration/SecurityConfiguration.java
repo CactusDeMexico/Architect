@@ -46,6 +46,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/deleteUserById").permitAll()
                 .antMatchers("/verifyMeeting").permitAll()
                 .antMatchers("/queryBlockedEmail").permitAll()
+.antMatchers("/quoteMaking").permitAll()
 
                 .antMatchers("/addProject").permitAll()
 
