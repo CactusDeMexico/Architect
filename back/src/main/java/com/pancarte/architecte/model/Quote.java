@@ -14,27 +14,34 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class Quote {
+    public Quote() {
+    }
+
+    public Quote(int id, int refProject, String email) {
+
+        this.id= id ;
+        RefProject = refProject;
+        this.email = email;
+
+    }
+
+    public Quote(int refProject, String email) {
+        RefProject = refProject;
+        this.email = email;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_quote")
     private int id;
 
-    @Column(name = "name")
-    private String projectName;
+    @Column(name = "id_ref_project")
+    private int RefProject;
 
-    @Column(name = "description")
-    private String description;
-
-    @Column(name = "type")
-    private String type;
-
-    @Column(name = "surface")
-    private int surface;
 
     @Column(name = "email")
     private String email;
-    @Column(name = "urlImg")
-    private String urlImg;
+
 
 
 }

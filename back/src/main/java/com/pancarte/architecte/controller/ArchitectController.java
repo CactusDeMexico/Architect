@@ -12,9 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
+import com.pancarte.architecte.model.Log;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.Date;
 import java.sql.Timestamp;
 import java.time.LocalDate;
@@ -36,9 +38,13 @@ public class ArchitectController {
     private final MaterialRepository materialRepository;
     private final BlockedMailRepository blockedMailRepository;
     private final ProjectRepository projectRepository;
+    private final QuoteRepository quoteRepository;
     private final UserService userService;
     private final JavaMailSender javaMailSender;
+
     private static final String SUBJECT = "Rendez vous avec M.architect ";
+
+
 
     /**
      * Le constructeur
@@ -48,18 +54,22 @@ public class ArchitectController {
      * @param materialRepository  le répertoire des materiaux
      * @param blockedMailRepository le répertoire des email bloqué
      * @param projectRepository le répertoire des project
+     * @param quoteRepository
      * @param userService le service des utilisateur
      * @param javaMailSender config pour l'envoie d'email
      *
      */
     @Autowired
-    public ArchitectController(@Qualifier("roleRepository") RoleRepository roleRepository, @Qualifier("userRepository") UserRepository userRepository, @Qualifier("meetingRepository") MeetingRepository meetingRepository, @Qualifier("materialRepository") MaterialRepository materialRepository, @Qualifier("blockedMailRepository") BlockedMailRepository blockedMailRepository, @Qualifier("projectRepository") ProjectRepository projectRepository, UserService userService, JavaMailSender javaMailSender) {
+    public ArchitectController(@Qualifier("roleRepository") RoleRepository roleRepository,
+                               @Qualifier("userRepository") UserRepository userRepository,
+                               @Qualifier("meetingRepository") MeetingRepository meetingRepository, @Qualifier("materialRepository") MaterialRepository materialRepository, @Qualifier("blockedMailRepository") BlockedMailRepository blockedMailRepository, @Qualifier("projectRepository") ProjectRepository projectRepository,@Qualifier("quoteRepository") QuoteRepository quoteRepository, UserService userService, JavaMailSender javaMailSender) {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
         this.meetingRepository = meetingRepository;
         this.materialRepository = materialRepository;
         this.blockedMailRepository = blockedMailRepository;
         this.projectRepository = projectRepository;
+        this.quoteRepository = quoteRepository;
         this.userService = userService;
         this.javaMailSender = javaMailSender;
     }
@@ -76,12 +86,9 @@ public class ArchitectController {
         msg.setSubject(subject);
         msg.setText(text);
         javaMailSender.send(msg);
+        Log log = new Log();
+        log.setInfo(email,subject,text);
     }
-    //todo:log4j
-
-    //todo:tests unitaires
-    //todo:Définir la licence de diffusion du code
-    //todo:Penser "utilisateur" : je souhaite modifier le contenu de l'email envoyé, il ne faut pas à avoir à modifier le code source, recompiler et redéployer l'application à chaque fois !!!
 
     /**
      * Cree un utilisateur
@@ -120,7 +127,7 @@ public class ArchitectController {
      * @return  un utilisateur
      */
     @RequestMapping(value = {"/queryUserByName"}, method = RequestMethod.GET)
-    public User queryUserByName(@RequestParam("email") String email) {
+    public User queryUserByEmail(@RequestParam("email") String email) {
         return userRepository.queryUser(email);
     }
 
@@ -139,13 +146,13 @@ public class ArchitectController {
      * Supprime un utilisateur
      * @param idUser
      */
-    @RequestMapping(value = {"/deleteUserById"}, method = RequestMethod.GET)
+ /*   @RequestMapping(value = {"/deleteUserById"}, method = RequestMethod.GET)
     public void deleteUserById(@RequestParam("id_user") int idUser) {
         User user = userRepository.findById(idUser);
         user.setHidden(true);
         userRepository.save(user);
     }
-
+*/
     /**
      * Ajoute un materiaux
      * @param name Nom du materiaux
@@ -162,12 +169,13 @@ public class ArchitectController {
         material.setName(name);
         materialRepository.save(material);
     }
-    @RequestMapping(value = {"/queryAllMaterial"}, method = RequestMethod.GET)
+
 
     /**
      *  Recupere tout les materiaux
      *   @return tout les materiaux
      */
+    @RequestMapping(value = {"/queryAllMaterial"}, method = RequestMethod.GET)
     public List<Material> queryAllMaterial(){
 
         return materialRepository.findAll();
@@ -280,7 +288,7 @@ public class ArchitectController {
 
         return materialRepository.queryProjectMaterial();
     }*/
-   //todo: quote
+
 
     /**
      * Creer un Devis
@@ -289,8 +297,8 @@ public class ArchitectController {
      */
     @RequestMapping(value = {"/quoteMaking"}, method = RequestMethod.GET)
     public void quoteMaking(@RequestParam("email") String email,@RequestParam("id_projet") int idProjet) {
-
-
+        Quote quote = new Quote();
+        quoteRepository.save(quote);
     }
 
     /**
@@ -298,7 +306,7 @@ public class ArchitectController {
      * @param email a valider
      * @return retourne si l'email est valide
      */
-    public static boolean isValidEmailAddress(String email) {
+    public boolean isValidEmailAddress(String email) {
         boolean result = true;
         try {
             InternetAddress emailAddr = new InternetAddress(email);
@@ -317,8 +325,11 @@ public class ArchitectController {
      */
     @RequestMapping(value = {"/sendMeeting"}, method = RequestMethod.GET)
     public void sendMeeting(@RequestParam("email") String email, @RequestParam("dateSended") Timestamp dateSended, @RequestParam("purpose") String purpose) {
+        Path currentRelativePath = Paths.get("");
+        String s = currentRelativePath.toAbsolutePath().toString();
+        System.out.println("Current relative path is: " + s);
         List<BlockedMail> blockedMails = blockedMailRepository.findAll();
-
+        Log log = new Log();
         if (!Arrays.toString(blockedMails.toArray()).contains(email) && isValidEmailAddress(email)) {
             User userArchitect = userRepository.queryUser("marj12@live.fr");
             System.out.println(email);
@@ -346,6 +357,11 @@ public class ArchitectController {
         } else {
             // possible mise en place d'envoie email pour les compte bloqué.
 
+            log.resultMailFail(email,purpose);
+
+
+
+
         }
     }
 
@@ -372,20 +388,32 @@ public class ArchitectController {
      * @param idMeeting
      */
     @RequestMapping(value = {"/verifyMeeting"}, method = RequestMethod.GET)
-    public void verifyMeeting(@RequestParam("meeting") boolean meeting, @RequestParam("id_meeting") int idMeeting) {
+    public void verifyMeeting(@RequestParam("meeting") boolean meeting, @RequestParam("id_meeting") int idMeeting) throws Exception {
         Meeting checkMeeting = meetingRepository.queryMeetingById(idMeeting);
 
         User userArchitect = userRepository.queryUser("marj12@live.fr");
-
-
+        ConfigReader data = new ConfigReader();
+        System.out.println(data.getTexte()+" lex txxxxxxxxxxx");
         if (meeting) {
+            if(data.isPersonlaMail()){
+                sendEmail(checkMeeting.getEmail(),
+                        SUBJECT,
+                        data.getTexte());
+            }else{
             sendEmail(checkMeeting.getEmail(),
                     SUBJECT,
                     "Votre rendez vous avec Mr Architect est confirmé pour le :" + checkMeeting.getDateMeeting());
+            }
         } else {
+            if(data.isPersonlaMail()){
+                sendEmail(checkMeeting.getEmail(),
+                        SUBJECT,
+                        data.getTexte());
+            }else{
             sendEmail(checkMeeting.getEmail(),
                     SUBJECT,
                     "Votre rendez vous avec Mr Architect est annulé pour le :" + checkMeeting.getDateMeeting());
+            }
         }
         checkMeeting.setMeetingValidate(meeting);
         checkMeeting.setClosed(true);
@@ -409,6 +437,8 @@ public class ArchitectController {
             LocalDate nextWeek = sendedDate.plus(1, ChronoUnit.WEEKS);
 
             if (sendedDate.compareTo(nextWeek) > 0 && !meeting.isMeetingValidate() && !meeting.isClosed()) {
+                Log log = new Log();
+                log.cancelMail(meeting.getEmail(),"annulation automatique");
                 sendEmail(meeting.getEmail(),
                         SUBJECT,
                         "Votre rendez vous avec Mr Architect est annulé pour le :" + meeting.getDateMeeting()

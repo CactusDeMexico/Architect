@@ -15,6 +15,19 @@ import java.sql.Timestamp;
 @Getter
 @Setter
 public class Meeting {
+    public Meeting() {
+    }
+
+    public Meeting(int id, boolean invitationSended, boolean meetingValidate, Timestamp dateSended, String purpose, boolean closed, Timestamp dateMeeting, String email) {
+        this.id= id ;
+        this.invitationSended = invitationSended;
+        this.meetingValidate = meetingValidate;
+        this.dateSended = dateSended;
+        this.purpose = purpose;
+        this.closed = closed;
+        this.dateMeeting = dateMeeting;
+        this.email = email;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

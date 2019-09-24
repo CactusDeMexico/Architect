@@ -57,7 +57,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/sendMeeting").permitAll()
                 .antMatchers("/queryProjectMaterial").permitAll()
 
-                .antMatchers("/queryUserByName").permitAll()
+                .antMatchers("/queryUserByEmail").permitAll()
 
                 .antMatchers("/queryAllMeeting").permitAll()
 

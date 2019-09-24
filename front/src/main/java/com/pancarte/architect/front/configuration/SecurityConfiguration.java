@@ -47,6 +47,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/queryMeeting").permitAll()
                 .antMatchers("/queryBlockedEmail").permitAll()
                 .antMatchers("/").permitAll()
+                .antMatchers("/img/**").anonymous() .antMatchers("/img/**").permitAll()
                 .antMatchers("/queryAllMeeting").permitAll()
                 .antMatchers("/home").permitAll()
                 .antMatchers("/index").permitAll()
@@ -56,7 +57,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/queryProject").permitAll()
                  .antMatchers("/queryAllMaterial").permitAll()
                 .antMatchers("/queryProjectMaterial").permitAll()
-
+                .antMatchers("/quoteMaking").permitAll()
                 .antMatchers("/verifyMeeting").permitAll()
 
                 .antMatchers("/login").permitAll()

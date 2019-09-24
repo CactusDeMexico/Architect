@@ -136,11 +136,13 @@ public class ArchitectController {
             String cap = search.substring(0, 1).toUpperCase() + search.substring(1);
             String caps = search.toUpperCase();
         }
+
+
         initView(auth,model,user);
-        /*List<Project_Material> project_materials=Architect.queryProjectMaterial();
+
         List<Project> projects = Architect.queryProject();
         model.addObject("projectList", projects);
-        model.addObject("projectMaterList",project_materials);*/
+
         model.addObject("search", search);
         model.addObject("view", "home");
         model.setViewName("index");

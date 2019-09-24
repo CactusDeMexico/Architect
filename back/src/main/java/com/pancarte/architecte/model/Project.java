@@ -15,6 +15,31 @@ import java.util.Set;
 @Getter
 @Setter
 public class Project {
+    public Project() {
+    }
+
+    public Project(int id, String projectName, String description, String type, int surface, String urlImg, boolean hidden, Set<Material> materials) {
+
+        this.id= id ;
+        this.projectName = projectName;
+        this.description = description;
+        this.type = type;
+        this.surface = surface;
+        this.urlImg = urlImg;
+        this.hidden = hidden;
+        this.materials = materials;
+    }
+
+    public Project(String projectName, String description, String type, int surface, String urlImg, boolean hidden, Set<Material> materials) {
+        this.projectName = projectName;
+        this.description = description;
+        this.type = type;
+        this.surface = surface;
+        this.urlImg = urlImg;
+        this.hidden = hidden;
+        this.materials = materials;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_project")

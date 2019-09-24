@@ -14,6 +14,14 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class Role {
+    public Role() {
+    }
+
+    public Role(int id, String role) {
+        this.id= id ;
+        this.role = role;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_role")

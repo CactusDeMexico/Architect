@@ -15,6 +15,15 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class BlockedMail {
+    public BlockedMail() {
+    }
+
+    public BlockedMail(int id, String email, String cause) {
+        this.id= id ;
+        this.email = email;
+        this.cause = cause;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_blocked_mail")

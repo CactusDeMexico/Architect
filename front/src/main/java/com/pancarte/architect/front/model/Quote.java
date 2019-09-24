@@ -15,16 +15,9 @@ public class Quote {
     private int id;
 
 
-    private String projectName;
+    private int RefProject;
 
 
-    private String description;
 
-
-    private String type;
-
-
-    private int surface;
     private String email;
-    private String urlImg;
 }

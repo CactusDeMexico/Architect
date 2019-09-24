@@ -14,6 +14,21 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class Material {
+    public Material() {
+    }
+
+    public Material(int id, String name, int thickness, boolean opaque) {
+        this.id = id;
+        this.name = name;
+        this.thickness = thickness;
+        this.opaque = opaque;
+    }
+    public Material( String name, int thickness, boolean opaque) {
+
+        this.name = name;
+        this.thickness = thickness;
+        this.opaque = opaque;
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_material")

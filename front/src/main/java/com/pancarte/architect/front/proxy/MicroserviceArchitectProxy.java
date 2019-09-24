@@ -143,6 +143,16 @@ public interface MicroserviceArchitectProxy {
     void sendMeeting(@RequestParam("email") String email,
                             @RequestParam("dateSended") Timestamp dateSended,
                             @RequestParam("purpose") String purpose);
+
+    /**
+     * Creer un Devis
+     * @param email
+     * @param idProjet
+     */
+    @RequestMapping(value = {"/quoteMaking"})
+    public void quoteMaking(@RequestParam("email") String email,@RequestParam("id_projet") int idProjet);
+
+
     /**
      * Recupere tout les emails bloqués
      * @return tout les emails bloqués
