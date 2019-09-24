@@ -15,6 +15,8 @@ sur [_OpenClassrooms_](https://www.openclassrooms.com).
 - Apache Maven 4.0
 - PostgreSQL 9.6
 - API Rest
+- JUnit
+- Log4j
 
 ### Framework
 - Spring MVC
