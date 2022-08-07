@@ -1,0 +1,12 @@
+com\pancarte\architect\front\model\Meeting.class
+com\pancarte\architect\front\FrontApplication.class
+com\pancarte\architect\front\model\BlockedMail.class
+com\pancarte\architect\front\model\Quote.class
+com\pancarte\architect\front\controller\ArchitectController.class
+com\pancarte\architect\front\proxy\MicroserviceArchitectProxy.class
+com\pancarte\architect\front\configuration\WebMvcConfig.class
+com\pancarte\architect\front\model\User.class
+com\pancarte\architect\front\model\Material.class
+com\pancarte\architect\front\model\Project.class
+com\pancarte\architect\front\model\Role.class
+com\pancarte\architect\front\configuration\SecurityConfiguration.class

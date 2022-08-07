@@ -1,0 +1,156 @@
+2021-oct.-12 16:31:16 PM [main] WARN  com.pancarte.architecte.model.Log - done
+2021-oct.-12 16:36:14 PM [main] WARN  com.pancarte.architecte.model.Log - done
+2021-oct.-12 16:52:48 PM [main] WARN  com.pancarte.architecte.model.Log - done
+2021-oct.-12 17:01:31 PM [http-nio-9090-exec-5] DEBUG org.hibernate.SQL - SELECT * FROM user_account u WHERE u.id_user > 0
+2021-oct.-12 17:11:43 PM [main] WARN  com.pancarte.architecte.model.Log - done
+2021-oct.-12 17:13:04 PM [http-nio-9090-exec-1] DEBUG org.hibernate.SQL - SELECT * FROM user_account u WHERE u.id_user > 0
+2021-oct.-12 17:15:23 PM [main] WARN  com.pancarte.architecte.model.Log - done
+2021-oct.-12 17:16:18 PM [http-nio-9090-exec-4] DEBUG org.hibernate.SQL - select material0_.id_material as id_mater1_1_, material0_.name as name2_1_, material0_.opaque as opaque3_1_, material0_.thickness as thicknes4_1_ from public.material material0_
+2021-oct.-12 17:16:55 PM [http-nio-9090-exec-6] DEBUG org.hibernate.SQL - select material0_.id_material as id_mater1_1_, material0_.name as name2_1_, material0_.opaque as opaque3_1_, material0_.thickness as thicknes4_1_ from public.material material0_
+2021-oct.-12 17:22:01 PM [main] WARN  com.pancarte.architecte.model.Log - done
+2021-oct.-12 17:27:29 PM [http-nio-9090-exec-3] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 17:27:29 PM [http-nio-9090-exec-3] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 17:27:29 PM [http-nio-9090-exec-3] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 17:27:29 PM [http-nio-9090-exec-3] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 17:27:29 PM [http-nio-9090-exec-4] DEBUG org.hibernate.SQL - select project0_.id_project as id_proje1_3_, project0_.description as descript2_3_, project0_.hidden as hidden3_3_, project0_.name as name4_3_, project0_.surface as surface5_3_, project0_.type as type6_3_, project0_.url_img as url_img7_3_ from public.project project0_
+2021-oct.-12 17:27:54 PM [http-nio-9090-exec-6] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 17:27:54 PM [http-nio-9090-exec-6] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 17:27:54 PM [http-nio-9090-exec-6] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 17:27:54 PM [http-nio-9090-exec-6] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 17:27:54 PM [http-nio-9090-exec-7] DEBUG org.hibernate.SQL - select project0_.id_project as id_proje1_3_, project0_.description as descript2_3_, project0_.hidden as hidden3_3_, project0_.name as name4_3_, project0_.surface as surface5_3_, project0_.type as type6_3_, project0_.url_img as url_img7_3_ from public.project project0_
+2021-oct.-12 17:27:56 PM [http-nio-9090-exec-8] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 17:27:56 PM [http-nio-9090-exec-8] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 17:27:56 PM [http-nio-9090-exec-8] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 17:27:56 PM [http-nio-9090-exec-8] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 17:27:56 PM [http-nio-9090-exec-9] DEBUG org.hibernate.SQL - select project0_.id_project as id_proje1_3_, project0_.description as descript2_3_, project0_.hidden as hidden3_3_, project0_.name as name4_3_, project0_.surface as surface5_3_, project0_.type as type6_3_, project0_.url_img as url_img7_3_ from public.project project0_
+2021-oct.-12 17:27:58 PM [http-nio-9090-exec-10] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 17:27:58 PM [http-nio-9090-exec-10] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 17:27:58 PM [http-nio-9090-exec-10] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 17:27:58 PM [http-nio-9090-exec-10] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 17:28:03 PM [http-nio-9090-exec-2] DEBUG org.hibernate.SQL - select blockedmai0_.id_blocked_mail as id_block1_0_, blockedmai0_.cause as cause2_0_, blockedmai0_.email as email3_0_ from public.blocked_mail blockedmai0_
+2021-oct.-12 17:28:03 PM [http-nio-9090-exec-1] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 17:28:03 PM [http-nio-9090-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 17:28:03 PM [http-nio-9090-exec-1] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 17:28:03 PM [http-nio-9090-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 17:41:03 PM [http-nio-9090-exec-4] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 17:41:03 PM [http-nio-9090-exec-4] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 17:41:03 PM [http-nio-9090-exec-4] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 17:41:03 PM [http-nio-9090-exec-4] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 17:41:03 PM [http-nio-9090-exec-5] DEBUG org.hibernate.SQL - select project0_.id_project as id_proje1_3_, project0_.description as descript2_3_, project0_.hidden as hidden3_3_, project0_.name as name4_3_, project0_.surface as surface5_3_, project0_.type as type6_3_, project0_.url_img as url_img7_3_ from public.project project0_
+2021-oct.-12 19:14:27 PM [http-nio-9090-exec-9] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 19:14:27 PM [http-nio-9090-exec-9] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 19:14:27 PM [http-nio-9090-exec-9] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 19:14:27 PM [http-nio-9090-exec-9] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 19:14:27 PM [http-nio-9090-exec-10] DEBUG org.hibernate.SQL - select project0_.id_project as id_proje1_3_, project0_.description as descript2_3_, project0_.hidden as hidden3_3_, project0_.name as name4_3_, project0_.surface as surface5_3_, project0_.type as type6_3_, project0_.url_img as url_img7_3_ from public.project project0_
+2021-oct.-12 19:35:07 PM [http-nio-9090-exec-3] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 19:35:07 PM [http-nio-9090-exec-3] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 19:35:07 PM [http-nio-9090-exec-3] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 19:35:07 PM [http-nio-9090-exec-3] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 19:35:07 PM [http-nio-9090-exec-4] DEBUG org.hibernate.SQL - select project0_.id_project as id_proje1_3_, project0_.description as descript2_3_, project0_.hidden as hidden3_3_, project0_.name as name4_3_, project0_.surface as surface5_3_, project0_.type as type6_3_, project0_.url_img as url_img7_3_ from public.project project0_
+2021-oct.-12 22:01:19 PM [http-nio-9090-exec-6] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 22:01:19 PM [http-nio-9090-exec-6] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 22:01:19 PM [http-nio-9090-exec-6] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 22:01:19 PM [http-nio-9090-exec-6] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 22:01:19 PM [http-nio-9090-exec-7] DEBUG org.hibernate.SQL - select project0_.id_project as id_proje1_3_, project0_.description as descript2_3_, project0_.hidden as hidden3_3_, project0_.name as name4_3_, project0_.surface as surface5_3_, project0_.type as type6_3_, project0_.url_img as url_img7_3_ from public.project project0_
+2021-oct.-12 22:41:14 PM [http-nio-9090-exec-10] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 22:41:14 PM [http-nio-9090-exec-9] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 22:41:14 PM [http-nio-9090-exec-9] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 22:41:14 PM [http-nio-9090-exec-10] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 22:41:14 PM [http-nio-9090-exec-9] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 22:41:14 PM [http-nio-9090-exec-10] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 22:41:14 PM [http-nio-9090-exec-9] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 22:41:14 PM [http-nio-9090-exec-10] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 23:44:51 PM [http-nio-9090-exec-3] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 23:44:51 PM [http-nio-9090-exec-3] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 23:44:51 PM [http-nio-9090-exec-3] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-12 23:44:51 PM [http-nio-9090-exec-3] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-12 23:44:51 PM [http-nio-9090-exec-4] DEBUG org.hibernate.SQL - select project0_.id_project as id_proje1_3_, project0_.description as descript2_3_, project0_.hidden as hidden3_3_, project0_.name as name4_3_, project0_.surface as surface5_3_, project0_.type as type6_3_, project0_.url_img as url_img7_3_ from public.project project0_
+2021-oct.-13 00:00:00 AM [scheduling-1] DEBUG org.hibernate.SQL - select meeting0_.id_meeting as id_meeti1_2_, meeting0_.closed as closed2_2_, meeting0_.date_meeting as date_mee3_2_, meeting0_.date_sended as date_sen4_2_, meeting0_.email as email5_2_, meeting0_.invitation_sended as invitati6_2_, meeting0_.meeting_validate as meeting_7_2_, meeting0_.purpose as purpose8_2_ from public.meeting meeting0_
+2021-oct.-13 00:00:00 AM [scheduling-1] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-13 00:00:00 AM [scheduling-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [marj12@live.fr]
+2021-oct.-13 10:13:05 AM [http-nio-9090-exec-6] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-13 10:13:05 AM [http-nio-9090-exec-6] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-13 10:13:05 AM [http-nio-9090-exec-6] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-13 10:13:05 AM [http-nio-9090-exec-6] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-13 10:13:05 AM [http-nio-9090-exec-7] DEBUG org.hibernate.SQL - select project0_.id_project as id_proje1_3_, project0_.description as descript2_3_, project0_.hidden as hidden3_3_, project0_.name as name4_3_, project0_.surface as surface5_3_, project0_.type as type6_3_, project0_.url_img as url_img7_3_ from public.project project0_
+2021-oct.-13 10:26:19 AM [http-nio-9090-exec-9] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-13 10:26:19 AM [http-nio-9090-exec-9] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-13 10:26:19 AM [http-nio-9090-exec-9] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-13 10:26:19 AM [http-nio-9090-exec-9] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-13 10:26:19 AM [http-nio-9090-exec-10] DEBUG org.hibernate.SQL - select project0_.id_project as id_proje1_3_, project0_.description as descript2_3_, project0_.hidden as hidden3_3_, project0_.name as name4_3_, project0_.surface as surface5_3_, project0_.type as type6_3_, project0_.url_img as url_img7_3_ from public.project project0_
+2021-oct.-13 10:48:27 AM [http-nio-9090-exec-1] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-13 10:48:27 AM [http-nio-9090-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-13 10:48:27 AM [http-nio-9090-exec-1] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-13 10:48:27 AM [http-nio-9090-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-13 10:48:27 AM [http-nio-9090-exec-3] DEBUG org.hibernate.SQL - select project0_.id_project as id_proje1_3_, project0_.description as descript2_3_, project0_.hidden as hidden3_3_, project0_.name as name4_3_, project0_.surface as surface5_3_, project0_.type as type6_3_, project0_.url_img as url_img7_3_ from public.project project0_
+2021-oct.-13 11:25:34 AM [http-nio-9090-exec-5] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-13 11:25:34 AM [http-nio-9090-exec-5] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-13 11:25:34 AM [http-nio-9090-exec-5] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-13 11:25:34 AM [http-nio-9090-exec-5] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-13 11:25:34 AM [http-nio-9090-exec-6] DEBUG org.hibernate.SQL - select project0_.id_project as id_proje1_3_, project0_.description as descript2_3_, project0_.hidden as hidden3_3_, project0_.name as name4_3_, project0_.surface as surface5_3_, project0_.type as type6_3_, project0_.url_img as url_img7_3_ from public.project project0_
+2021-oct.-13 13:45:46 PM [http-nio-9090-exec-8] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-13 13:45:46 PM [http-nio-9090-exec-8] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-13 13:45:46 PM [http-nio-9090-exec-8] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-13 13:45:46 PM [http-nio-9090-exec-8] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-13 13:45:46 PM [http-nio-9090-exec-9] DEBUG org.hibernate.SQL - select project0_.id_project as id_proje1_3_, project0_.description as descript2_3_, project0_.hidden as hidden3_3_, project0_.name as name4_3_, project0_.surface as surface5_3_, project0_.type as type6_3_, project0_.url_img as url_img7_3_ from public.project project0_
+2021-oct.-13 14:34:11 PM [http-nio-9090-exec-1] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-13 14:34:11 PM [http-nio-9090-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-13 14:34:11 PM [http-nio-9090-exec-1] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-13 14:34:11 PM [http-nio-9090-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-13 14:34:11 PM [http-nio-9090-exec-3] DEBUG org.hibernate.SQL - select project0_.id_project as id_proje1_3_, project0_.description as descript2_3_, project0_.hidden as hidden3_3_, project0_.name as name4_3_, project0_.surface as surface5_3_, project0_.type as type6_3_, project0_.url_img as url_img7_3_ from public.project project0_
+2021-oct.-13 15:40:59 PM [http-nio-9090-exec-5] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-13 15:40:59 PM [http-nio-9090-exec-5] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-13 15:40:59 PM [http-nio-9090-exec-5] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-oct.-13 15:40:59 PM [http-nio-9090-exec-5] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-oct.-13 15:40:59 PM [http-nio-9090-exec-6] DEBUG org.hibernate.SQL - select project0_.id_project as id_proje1_3_, project0_.description as descript2_3_, project0_.hidden as hidden3_3_, project0_.name as name4_3_, project0_.surface as surface5_3_, project0_.type as type6_3_, project0_.url_img as url_img7_3_ from public.project project0_
+2021-nov.-21 09:05:49 AM [main] WARN  com.pancarte.architecte.model.Log - done
+2021-nov.-21 09:13:59 AM [http-nio-9090-exec-5] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:13:59 AM [http-nio-9090-exec-5] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:13:59 AM [http-nio-9090-exec-5] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:13:59 AM [http-nio-9090-exec-5] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:13:59 AM [http-nio-9090-exec-6] DEBUG org.hibernate.SQL - select project0_.id_project as id_proje1_3_, project0_.description as descript2_3_, project0_.hidden as hidden3_3_, project0_.name as name4_3_, project0_.surface as surface5_3_, project0_.type as type6_3_, project0_.url_img as url_img7_3_ from public.project project0_
+2021-nov.-21 09:14:00 AM [http-nio-9090-exec-7] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:00 AM [http-nio-9090-exec-7] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:00 AM [http-nio-9090-exec-7] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:00 AM [http-nio-9090-exec-7] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:12 AM [http-nio-9090-exec-9] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:12 AM [http-nio-9090-exec-9] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:12 AM [http-nio-9090-exec-9] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:12 AM [http-nio-9090-exec-9] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:13 AM [http-nio-9090-exec-10] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:13 AM [http-nio-9090-exec-10] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:13 AM [http-nio-9090-exec-10] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:13 AM [http-nio-9090-exec-10] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:18 AM [http-nio-9090-exec-2] DEBUG org.hibernate.SQL - select blockedmai0_.id_blocked_mail as id_block1_0_, blockedmai0_.cause as cause2_0_, blockedmai0_.email as email3_0_ from public.blocked_mail blockedmai0_
+2021-nov.-21 09:14:18 AM [http-nio-9090-exec-3] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:18 AM [http-nio-9090-exec-3] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:18 AM [http-nio-9090-exec-3] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:18 AM [http-nio-9090-exec-3] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:18 AM [http-nio-9090-exec-4] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:18 AM [http-nio-9090-exec-4] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:18 AM [http-nio-9090-exec-4] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:18 AM [http-nio-9090-exec-4] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:20 AM [http-nio-9090-exec-5] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:20 AM [http-nio-9090-exec-5] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:20 AM [http-nio-9090-exec-5] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:20 AM [http-nio-9090-exec-5] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:20 AM [http-nio-9090-exec-6] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:20 AM [http-nio-9090-exec-6] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:20 AM [http-nio-9090-exec-6] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:20 AM [http-nio-9090-exec-6] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:32 AM [http-nio-9090-exec-8] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:32 AM [http-nio-9090-exec-8] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:32 AM [http-nio-9090-exec-8] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:32 AM [http-nio-9090-exec-8] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:32 AM [http-nio-9090-exec-9] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:32 AM [http-nio-9090-exec-9] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:32 AM [http-nio-9090-exec-9] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:32 AM [http-nio-9090-exec-9] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:54 AM [http-nio-9090-exec-1] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:54 AM [http-nio-9090-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:54 AM [http-nio-9090-exec-1] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:54 AM [http-nio-9090-exec-1] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:54 AM [http-nio-9090-exec-2] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:54 AM [http-nio-9090-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]
+2021-nov.-21 09:14:54 AM [http-nio-9090-exec-2] DEBUG org.hibernate.SQL -  select * from user_account where email=?
+2021-nov.-21 09:14:54 AM [http-nio-9090-exec-2] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [anonymousUser]

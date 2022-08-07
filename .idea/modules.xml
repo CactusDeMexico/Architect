@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Architect.iml" filepath="$PROJECT_DIR$/.idea/Architect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/back/architecte.iml" filepath="$PROJECT_DIR$/back/architecte.iml" />
+      <module fileurl="file://$PROJECT_DIR$/front/front.iml" filepath="$PROJECT_DIR$/front/front.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frontAngular/frontAngular.iml" filepath="$PROJECT_DIR$/frontAngular/frontAngular.iml" />
+    </modules>
+  </component>
+</project>

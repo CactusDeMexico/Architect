@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.pancarte.architecte.controller.ArchitectControllerTest
+-------------------------------------------------------------------------------
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.935 s - in com.pancarte.architecte.controller.ArchitectControllerTest

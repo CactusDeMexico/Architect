@@ -1,0 +1,93 @@
+
+n	java:S116'"TRename this field "Architect" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÕÔÔıÿÿÿÿ
+Œ
+java:S1130="qRemove the declaration of thrown exception 'java.text.ParseException', as it cannot be thrown from method's body.(ÌÈÿÊùÿÿÿÿ
+]
+java:S4488<"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(é÷­g
+^
+java:S4488o"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(î‡’Ÿ
+T
+java:S1854Š"8Remove this useless assignment to local variable "caps".(¨–öşúÿÿÿÿ
+N
+java:S1854‰"7Remove this useless assignment to local variable "cap".(ò´äĞ
+Œ
+java:S1130"qRemove the declaration of thrown exception 'java.text.ParseException', as it cannot be thrown from method's body.(÷¨–µüÿÿÿÿ
+^
+java:S4488~"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(»É»·
+B
+java:S1481…"+Remove this unused "userId" local variable.(…¦Üî
+?
+java:S1481‰"(Remove this unused "cap" local variable.(ò´äĞ
+E
+java:S1481Š")Remove this unused "caps" local variable.(¨–öşúÿÿÿÿ
+f
+java:S4488 "JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Õöóÿÿÿÿÿ
+T	java:S106«"9Replace this use of System.out or System.err by a logger.(î¸ıÿÿÿÿ
+_
+java:S4488¶"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¤Íı¨
+B
+java:S1481½"+Remove this unused "userId" local variable.(…¦Üî
+d
+java:S4488Î"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(‘Õ¨—úÿÿÿÿ
+a
+java:S4488Ù"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¡’²Î
+T
+java:S1854ç"8Remove this useless assignment to local variable "auth".(¡œõµûÿÿÿÿ
+_
+java:S4488ä"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(„øĞ‘
+E
+java:S1481ç")Remove this unused "auth" local variable.(¡œõµûÿÿÿÿ
+d
+java:S4488ô"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(úÇÉèıÿÿÿÿ
+V	java:S106ú"9Replace this use of System.out or System.err by a logger.(Êò™ 8Ñ¢¨Ç/
+d
+java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(„¶Ò§ıÿÿÿÿ
+W	java:S125“"<This block of commented-out lines of code should be removed.(Ÿãµûÿÿÿÿÿ
+a
+java:S4488¢"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ã²×Á
+W	java:S125«"<This block of commented-out lines of code should be removed.(Ÿãµûÿÿÿÿÿ
+Q	java:S125¯"<This block of commented-out lines of code should be removed.(Ã´š
+W	java:S125¶"<This block of commented-out lines of code should be removed.(Ÿãµûÿÿÿÿÿ
+
+java:S1130Ä"qRemove the declaration of thrown exception 'java.text.ParseException', as it cannot be thrown from method's body.(¸øòéıÿÿÿÿ
+_
+java:S4488Ã"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(²ÓæÃ
+_
+java:S4488à"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(×ª€ì
+a
+java:S4488ñ"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(éÖ…Ä
+4
+java:S2119"Save and re-use this "Random".(¼İÅf
+d
+java:S4488˜"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(œçóÊøÿÿÿÿ
+f
+java:S4488­"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¹Øú™úÿÿÿÿ
+d
+java:S4488º"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ª¨¾úûÿÿÿÿ
+l
+java:S1128"QRemove this unused import 'org.springframework.format.annotation.DateTimeFormat'.(‡ˆôƒøÿÿÿÿ
+@
+java:S1128"*Remove this unused import 'java.sql.Date'.(ÙÀ½Ê
+K
+java:S1128"0Remove this unused import 'java.time.LocalDate'.(›‘¬èıÿÿÿÿ
+O
+java:S1128"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿ
+U
+java:S1128"?Remove this unused import 'java.time.format.DateTimeFormatter'.(‰÷÷ª
+c
+java:S1192P"HDefine a constant instead of duplicating this literal "project" 4 times.(í…»½ûÿÿÿÿ
+l
+java:S1192¯"PDefine a constant instead of duplicating this literal "redirect:/index" 4 times.(Ò¶Ò“üÿÿÿÿ
+^
+java:S1192K"HDefine a constant instead of duplicating this literal "meeting" 4 times.(˜µ®Ğ
+^
+java:S1192•"GDefine a constant instead of duplicating this literal "index" 11 times.(ÿ»¤ì
+e
+java:S11925"JDefine a constant instead of duplicating this literal "userName" 10 times.(æ€Ÿ«ÿÿÿÿÿ
+e
+java:S1192ê"IDefine a constant instead of duplicating this literal "material" 3 times.(ä³ÌÄıÿÿÿÿ
+e
+java:S1192X"JDefine a constant instead of duplicating this literal "materials" 3 times.(û¦‘ñûÿÿÿÿ
+c
+java:S11923"NDefine a constant instead of duplicating this literal "anonymousUser" 3 times.(’³†h
+g	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åí©Š

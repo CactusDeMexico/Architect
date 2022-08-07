@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.pancarte.architect.front.FrontApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.051 s <<< FAILURE! - in com.pancarte.architect.front.FrontApplicationTests
+contextLoads(com.pancarte.architect.front.FrontApplicationTests)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class org.codehaus.groovy.reflection.ReflectionCache
+

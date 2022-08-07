@@ -1,0 +1,1 @@
+2021-oct.-12 16:12:35 PM [main] DEBUG org.hibernate.SQL - alter table if exists public.quote add column id_ref_project int4
