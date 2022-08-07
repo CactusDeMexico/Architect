@@ -1,0 +1,463 @@
+# Created at 2022-07-04T21:42:34.231
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:396)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+# Created at 2022-07-04T21:42:35.649
+Unexpected IOException with stream: 2022-07-04 21:42:35.648  INFO 1936 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d3f6c07e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+
+# Created at 2022-07-04T21:42:35.682
+Unexpected IOException with stream: 2022-07-04 21:42:35.681  INFO 1936 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$53770db0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+
+# Created at 2022-07-04T21:42:35.851
+Unexpected IOException with stream: 2022-juil.-04 21:42:35 PM [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+
+
+# Created at 2022-07-04T21:42:35.863
+Unexpected IOException with stream: 2022-07-04 21:42:35.863  INFO 1936 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+
+
+# Created at 2022-07-04T21:42:35.920
+Unexpected IOException with stream: 2022-07-04 21:42:35.919  INFO 1936 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+
+
+# Created at 2022-07-04T21:42:35.922
+Unexpected IOException with stream: 2022-juil.-04 21:42:35 PM [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+
+
+# Created at 2022-07-04T21:42:36.001
+Unexpected IOException with stream: 2022-juil.-04 21:42:36 PM [main] INFO  org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+
+
+# Created at 2022-07-04T21:42:36.002
+Unexpected IOException with stream: 2022-juil.-04 21:42:36 PM [main] INFO  org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@53e93fb7
+
+
+# Created at 2022-07-04T21:42:36.203
+Unexpected IOException with stream: 2022-07-04 21:42:36.202  INFO 1936 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+
+
+# Created at 2022-07-04T21:42:36.878
+Unexpected IOException with stream: 2022-07-04 21:42:36.877  INFO 1936 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7cfb255, org.springframework.security.web.context.SecurityContextPersistenceFilter@165634aa, org.springframework.security.web.header.HeaderWriterFilter@3d577add, org.springframework.security.web.authentication.logout.LogoutFilter@3dcf26b5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@bcde468, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c2503d2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1aa21319, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@6be7a271, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@214fe287, org.springframework.security.web.session.SessionManagementFilter@712adc04, org.springframework.security.web.access.ExceptionTranslationFilter@7f9ebcfe, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26501edd]
+
+
+# Created at 2022-07-04T21:42:36.888
+Unexpected IOException with stream: 2022-07-04 21:42:36.888  WARN 1936 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+
+
+# Created at 2022-07-04T21:42:37.506
+Unexpected IOException with stream: 2022-07-04 21:42:37.505  INFO 1936 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+
+
+# Created at 2022-07-04T21:42:37.522
+Unexpected IOException with stream: 2022-07-04 21:42:37.521  WARN 1936 --- [           main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+
+
+# Created at 2022-07-04T21:42:37.726
+Unexpected IOException with stream: 2022-07-04 21:42:37.725  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:37.727
+Unexpected IOException with stream: 2022-07-04 21:42:37.727  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:37.746
+Unexpected IOException with stream: 2022-07-04 21:42:37.745  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 18 ms
+
+
+# Created at 2022-07-04T21:42:37.772
+Unexpected IOException with stream: 2022-07-04 21:42:37.771  INFO 1936 --- [           main] c.p.a.c.ArchitectControllerTest          : Started ArchitectControllerTest in 3.89 seconds (JVM running for 15.527)
+
+
+# Created at 2022-07-04T21:42:37.784
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryUserByName(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:37.788
+Unexpected IOException with stream: 2022-07-04 21:42:37.787  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:37.789
+Unexpected IOException with stream: 2022-07-04 21:42:37.788  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:37.794
+Unexpected IOException with stream: 2022-07-04 21:42:37.793  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+
+
+# Created at 2022-07-04T21:42:37.821
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryUserByName(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:37.824
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,cleanMeeting(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:37.827
+Unexpected IOException with stream: 2022-07-04 21:42:37.826  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:37.828
+Unexpected IOException with stream: 2022-07-04 21:42:37.827  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:37.832
+Unexpected IOException with stream: 2022-07-04 21:42:37.831  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+
+
+# Created at 2022-07-04T21:42:37.837
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,cleanMeeting(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:37.840
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryUserByWrongId(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:37.843
+Unexpected IOException with stream: 2022-07-04 21:42:37.842  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:37.844
+Unexpected IOException with stream: 2022-07-04 21:42:37.843  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:37.848
+Unexpected IOException with stream: 2022-07-04 21:42:37.847  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+
+
+# Created at 2022-07-04T21:42:37.853
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryUserByWrongId(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:37.856
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,isValidEmailAddress(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:37.858
+Unexpected IOException with stream: 2022-07-04 21:42:37.857  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:37.859
+Unexpected IOException with stream: 2022-07-04 21:42:37.858  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:37.862
+Unexpected IOException with stream: 2022-07-04 21:42:37.862  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+
+
+# Created at 2022-07-04T21:42:37.867
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,isValidEmailAddress(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:37.870
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryAllUserEmpty(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:37.872
+Unexpected IOException with stream: 2022-07-04 21:42:37.872  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:37.873
+Unexpected IOException with stream: 2022-07-04 21:42:37.873  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:37.876
+Unexpected IOException with stream: 2022-07-04 21:42:37.876  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+
+
+# Created at 2022-07-04T21:42:37.957
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryAllUserEmpty(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:37.960
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,addMaterial(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:37.962
+Unexpected IOException with stream: 2022-07-04 21:42:37.961  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:37.963
+Unexpected IOException with stream: 2022-07-04 21:42:37.962  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:37.966
+Unexpected IOException with stream: 2022-07-04 21:42:37.966  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+
+
+# Created at 2022-07-04T21:42:37.969
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,addMaterial(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:37.972
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,deleteProject(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:37.975
+Unexpected IOException with stream: 2022-07-04 21:42:37.974  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:37.976
+Unexpected IOException with stream: 2022-07-04 21:42:37.975  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:37.980
+Unexpected IOException with stream: 2022-07-04 21:42:37.979  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+
+
+# Created at 2022-07-04T21:42:37.984
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,deleteProject(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:37.986
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,sendEmail(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:37.989
+Unexpected IOException with stream: 2022-07-04 21:42:37.988  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:37.990
+Unexpected IOException with stream: 2022-07-04 21:42:37.989  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:37.993
+Unexpected IOException with stream: 2022-07-04 21:42:37.993  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+
+
+# Created at 2022-07-04T21:42:37.996
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,sendEmail(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:37.999
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryAllMaterial(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.001
+Unexpected IOException with stream: 2022-07-04 21:42:38.001  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:38.002
+Unexpected IOException with stream: 2022-07-04 21:42:38.002  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:38.005
+Unexpected IOException with stream: 2022-07-04 21:42:38.005  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+
+
+# Created at 2022-07-04T21:42:38.043
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryAllMaterial(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.045
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,blockEmail1(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.047
+Unexpected IOException with stream: 2022-07-04 21:42:38.047  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:38.048
+Unexpected IOException with stream: 2022-07-04 21:42:38.047  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:38.051
+Unexpected IOException with stream: 2022-07-04 21:42:38.051  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+
+
+# Created at 2022-07-04T21:42:38.054
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,blockEmail1(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.057
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryAllUser(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.058
+Unexpected IOException with stream: 2022-07-04 21:42:38.058  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:38.059
+Unexpected IOException with stream: 2022-07-04 21:42:38.058  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:38.062
+Unexpected IOException with stream: 2022-07-04 21:42:38.062  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+
+
+# Created at 2022-07-04T21:42:38.071
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryAllUser(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.073
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,quoteMaking(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.075
+Unexpected IOException with stream: 2022-07-04 21:42:38.074  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:38.076
+Unexpected IOException with stream: 2022-07-04 21:42:38.075  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:38.079
+Unexpected IOException with stream: 2022-07-04 21:42:38.079  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+
+
+# Created at 2022-07-04T21:42:38.082
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,quoteMaking(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.084
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,verifyMeeting(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.086
+Unexpected IOException with stream: 2022-07-04 21:42:38.086  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:38.087
+Unexpected IOException with stream: 2022-07-04 21:42:38.087  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:38.091
+Unexpected IOException with stream: 2022-07-04 21:42:38.090  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+
+
+# Created at 2022-07-04T21:42:38.094
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,verifyMeeting(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.096
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryProject(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.098
+Unexpected IOException with stream: 2022-07-04 21:42:38.097  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:38.098
+Unexpected IOException with stream: 2022-07-04 21:42:38.098  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:38.101
+Unexpected IOException with stream: 2022-07-04 21:42:38.101  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+
+
+# Created at 2022-07-04T21:42:38.111
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryProject(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.113
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,createUser(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.115
+Unexpected IOException with stream: 2022-07-04 21:42:38.114  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:38.115
+Unexpected IOException with stream: 2022-07-04 21:42:38.115  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:38.121
+Unexpected IOException with stream: 2022-07-04 21:42:38.120  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+
+
+# Created at 2022-07-04T21:42:38.124
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,createUser(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.127
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryUserByWrongName(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.129
+Unexpected IOException with stream: 2022-07-04 21:42:38.128  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:38.129
+Unexpected IOException with stream: 2022-07-04 21:42:38.129  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:38.134
+Unexpected IOException with stream: 2022-07-04 21:42:38.133  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+
+
+# Created at 2022-07-04T21:42:38.136
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryUserByWrongName(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.138
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryUserById(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.139
+Unexpected IOException with stream: 2022-07-04 21:42:38.138  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:38.139
+Unexpected IOException with stream: 2022-07-04 21:42:38.139  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:38.143
+Unexpected IOException with stream: 2022-07-04 21:42:38.142  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+
+
+# Created at 2022-07-04T21:42:38.145
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryUserById(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.147
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,addProject(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.148
+Unexpected IOException with stream: 2022-07-04 21:42:38.148  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:38.149
+Unexpected IOException with stream: 2022-07-04 21:42:38.149  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:38.152
+Unexpected IOException with stream: 2022-07-04 21:42:38.152  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+
+
+# Created at 2022-07-04T21:42:38.154
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,addProject(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.157
+Unexpected IOException: 5,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryblockedEmail(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.158
+Unexpected IOException with stream: 2022-07-04 21:42:38.158  INFO 1936 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+
+
+# Created at 2022-07-04T21:42:38.159
+Unexpected IOException with stream: 2022-07-04 21:42:38.159  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+
+
+# Created at 2022-07-04T21:42:38.162
+Unexpected IOException with stream: 2022-07-04 21:42:38.161  INFO 1936 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+
+
+# Created at 2022-07-04T21:42:38.167
+Unexpected IOException: 6,1,com.pancarte.architecte.controller.ArchitectControllerTest,queryblockedEmail(com.pancarte.architecte.controller.ArchitectControllerTest),null,null,null
+
+
+# Created at 2022-07-04T21:42:38.168
+Unexpected IOException: 2,1,org.apache.maven.surefire.junit4.JUnit4Provider,com.pancarte.architecte.controller.ArchitectControllerTest,null,null,null
+
+
